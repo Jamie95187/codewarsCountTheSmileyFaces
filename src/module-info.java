@@ -1,2 +1,3 @@
 module codewarsCountTheSmileyFaces {
+	requires junit;
 }
