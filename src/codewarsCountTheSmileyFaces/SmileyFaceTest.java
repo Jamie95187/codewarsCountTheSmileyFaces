@@ -1,3 +1,13 @@
+/*
+ * This is a solution to the codewars problem:
+ * https://www.codewars.com/kata/583203e6eb35d7980400002a/train/java
+ * Solved using TDD processes. Consult Readme for full details.
+ * 
+ * @author  Jamie Wong
+ * @version 13.0.0
+ * @since	09/04/2020
+ */
+
 package codewarsCountTheSmileyFaces;
 
 import static org.junit.Assert.*;
@@ -54,5 +64,12 @@ public class SmileyFaceTest {
         assertEquals(3, SmileyFace.countSmileys(array));
     }
 
-	
+	@Test
+	public void countSmileyFacesTest_2ValidSmileysOutOf4_return2() {
+        array.add(":)");
+        array.add(";(");
+        array.add(";}");
+        array.add(":-D");
+        assertEquals(2, SmileyFace.countSmileys(array));
+    }
 }

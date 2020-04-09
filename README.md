@@ -29,5 +29,53 @@ countSmileys([';]', ':[', ';*', ':$', ';-D']); // should return 1;
 
 Using Junit 4 and testing in the eclipse IDE.
 
+```
+@Test
+public void countSmileyFacesTest_1ValidSmiley_return1() {
+    array.add(":)");
+    assertEquals(1, SmileyFace.countSmileys(array));
+}
+
+@Test
+public void countSmileyFacesTest_1ValidSmileyOutOf2_return1() {
+    array.add(":)");
+    array.add(":(");
+    assertEquals(1, SmileyFace.countSmileys(array));
+    array.clear();
+    array.add(":)");
+    array.add(":[");
+    assertEquals(1, SmileyFace.countSmileys(array));
+}
+
+@Test
+public void countSmileyFacesTest_2ValidSmileys_return2() {
+    array.add(":)");
+    assertEquals(1, SmileyFace.countSmileys(array));
+    array.add(":-D");
+    assertEquals(2, SmileyFace.countSmileys(array));
+}
+
+@Test
+public void countSmileyFacesTest_3ValidSmileysOutOf4_return2() {
+    array.add(":)");
+    assertEquals(1, SmileyFace.countSmileys(array));
+    array.add(":-D");
+    assertEquals(2, SmileyFace.countSmileys(array));
+    array.add(":D");
+    assertEquals(3, SmileyFace.countSmileys(array));
+    array.add(":-(");
+    assertEquals(3, SmileyFace.countSmileys(array));
+}
+
+@Test
+public void countSmileyFacesTest_2ValidSmileysOutOf4_return2() {
+    array.add(":)");
+    array.add(";(");
+    array.add(";}");
+    array.add(":-D");
+    assertEquals(2, SmileyFace.countSmileys(array));
+}
+```
+
 
 
