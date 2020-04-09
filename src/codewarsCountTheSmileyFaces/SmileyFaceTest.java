@@ -72,4 +72,13 @@ public class SmileyFaceTest {
         array.add(":-D");
         assertEquals(2, SmileyFace.countSmileys(array));
     }
+	
+	@Test
+	public void countSmileyFacesTest_3ValidSmileysOutOf4_return3() {
+        array.add(";D");
+        array.add(":-(");
+        array.add(":-)");
+        array.add(";~)");
+        assertEquals(3, SmileyFace.countSmileys(array));
+    }
 }
