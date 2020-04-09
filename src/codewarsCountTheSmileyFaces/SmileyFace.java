@@ -6,7 +6,7 @@ public class SmileyFace {
 
 	static int countSmileys(List<String> array) {
 		for(String smiley : array) {
-			if(smiley.contains("(")) {
+			if(smiley.contains("(") || smiley.contains("[")) {
 				return array.size() - 1;
 			}
 		}

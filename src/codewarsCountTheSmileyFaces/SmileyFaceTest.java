@@ -28,6 +28,10 @@ public class SmileyFaceTest {
         array.add(":)");
         array.add(":(");
         assertEquals(1, SmileyFace.countSmileys(array));
+        array.clear();
+        array.add(":)");
+        array.add(":[");
+        assertEquals(1, SmileyFace.countSmileys(array));
     }
 	
 	@Test
